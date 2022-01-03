@@ -1,17 +1,19 @@
-console.log("hello world");
+// Data fetching
+const getTopStories = async () => {
+    const topStories = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
+    console.log(topStories.data);
+}
 
-axios({
-    url: 'http://www.yourserver.com/api/neat_stuff',
-    method: 'post',
-    headers: {
-      'content-type': 'multipart/form-data'
-    },
-    data: form
-  })
+const getNewStories = async () => {
+    const newStories = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
+    console.log(newStories.data);
+}
 
-  // Endless scroll xkcd
-//    Trigger new API call on each scrolldown
-  // Put a counter on each API call / image load
-//   Menu bar: Random, by date, endless scroll, newest, oldest, NFT (just kidding donate)
+const getBestStories = async () => {
+    const bestStories = await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty');
+    console.log(bestStories.data);
+}
 
-
+getTopStories();
+getNewStories();
+getBestStories();
