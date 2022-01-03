@@ -1,2 +1,3 @@
-# xkcd-Me
-An xkcd archive
+# Pure Hacker News
+
+News without the chatter
