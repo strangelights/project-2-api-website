@@ -1,7 +1,38 @@
+* { padding: 0; 
+    margin: 0; }
 body {
-    background-color: teal;
+    font-family: Helvetica, Sans-Serif;
 }
 
-h1  {
-    color: white;
+h1 {
+    padding: 10px 0px 15px 10px;
 }
+
+header {
+    color: #000;
+    background-color: tomato;
+    padding-bottom: 30px;
+}
+
+h2 {
+    display: none; /* Remove before styling */
+    font-size: 15px;
+    opacity: 75%;
+}
+
+nav {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#hero-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+#pure {
+    color: #fff;
+}
+
