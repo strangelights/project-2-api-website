@@ -3,6 +3,21 @@
     margin: 0;
 }
 
+a {
+    color: #1a1a1a;
+}
+
+a:visited {
+    color: #1a1a1a;
+    opacity: 75%;
+}
+
+article {
+    font-size: 19px;
+    margin-bottom: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
     font-family: Helvetica, Sans-Serif;
 }
@@ -11,14 +26,45 @@ header {
     color: #1a1a1a;
     background-color: tomato;
     padding-bottom: 18px;
+    position: sticky;
+    top: 0;
+    transition: 0.4s;
+}
+
+main {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
 nav {
-    text-align: center;
-    padding-top: 10px;
+    
+    display: flex;
+    justify-content: space-between;
+    
+} 
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:active {
+    color: white;
+  }
+
+nav #nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-right: 75px;
+    width: 180px;
+    font-size: 20px;
+    
 }
 
 h1 {
+    font-size: 30px;
     padding: 10px 0px 15px 10px;
 }
 
@@ -43,3 +89,6 @@ h2 {
     margin-right: -4px;
 }
 
+.rank {
+    margin-right: 8px;
+}
