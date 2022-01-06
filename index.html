@@ -9,23 +9,18 @@
     <script src="scripts.js" defer></script>
     <title>Pure Hacker News</title>
 </head>
-<body>
+<body onload="getTopStories()">
     <header>
-        <h1><span id="pure">Pure</span> Hacker News</h1>
-        
+        <nav>
+            <h1><span id="pure">Pure</span> Hacker News</h1>
+            <div id="nav-links">
+                <a href="#" onclick="getTopStories()" autofocus>Top</a> |
+                <a href="#" onclick="getNewStories()">New</a> |
+                <a href="#" onclick="getBestStories()">Best</a>
+            </div>
+        </nav>
         <img id="hero-image" src="https://imgs.xkcd.com/comics/throwing_rocks.png" alt="A comic strip about the futility of reading comments sections.">
         <h2>Keep the news. Hold the chatter.</h2>
     </header>
-    <nav>
-        <a href="#">Top Stories</a> |
-        <a href="#">New Stories</a> |
-        <a href="#">Best Stories</a>
-    </nav>
     <main></main>
 </body>
-</html>
-
-
-
-<!-- To Do -->
-<!-- 1. Collapse header on scroll -->
