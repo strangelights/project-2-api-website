@@ -40,11 +40,17 @@ const getBestStories = async () => {
     buildDOM(storyArray);
 }
 
-const buildDOM = (array) => {
+const buildDOM = (array, clearDOM = true) => {
+    
+    let main = document.body.querySelector('main');
+    // let clearDOM = bool;
+    if (clearDOM) {
+        main.innerHTML = '';
+    }
+    
     // Creates necessary dom elements and populates values using function parameter
     array.forEach((story, i) => {
 
-        let main = document.body.querySelector('main');
         let article = document.createElement('article');
         
         let rank = document.createElement('span');
@@ -62,11 +68,17 @@ const buildDOM = (array) => {
     });
 }
 
-getTopStories();
-getNewStories();
-getBestStories();
+/* Collapse header section into navbar on scroll */
+window.onscroll = function() {scrollFunction()};
 
-
+function scrollFunction() {
+    let img = document.getElementById("hero-image")
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementsByTagName('header')[0].style.paddingBottom = "0px"; 
+        document.getElementById('hero-image').style.display = "none";
+        document.getElementsByTagName('h2')[0].style.display = "none";
+    }
+}
 
 
 
